@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' ,sans-serif;
+}
+
+body {
+    background-color: #333;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    display: flex;
+
+    
+}
+body .polygon {
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%) ;
+    display: flex;
+    top: 5%;
+    left: 40%;
+    
+}
+
+    
+
+footer {
+    background: #1d53a3;
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    padding: 20px 50px;
+    align-items: center;
+
+}
+footer .social-icon {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 10px o;
+    flex-wrap: wrap;
+ }
+footer .social-icon li {
+    list-style: none;
+}
+
+footer .social-icon li a {
+    color: #fff;
+    margin: 0 10PX;
+    font-size: 2em;
+    display: inline-block;
+    transition: 0.5s;
+}
+footer .social-icon li a:hover {
+    transform:translateY(-20px);
+ }
+
+.footer-en {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+
+ }
+
+.footer-en .text-600 {
+    color: #5a119e;
+    font-weight: 700;
+}
+.footer-en .text-300 {
+    color:#8448C5 ;
+    font-size: large;
+    font-family: Arial;
+    font-weight: lighter;
+}
+
+.footer-en a {
+    text-decoration: none;
+    font-size: large;
+    color:bisque;
+    padding: 5px;
+    font-family: 'comforta' sans-serif;
+    
+}
+
+footer .wave {
+    position: absolute;
+    height:100px ;
+    background: #ffffff url(wave.png.png);
+    width: 100%;
+    
+    top: -100px;
+    left: 0;
+    background-size: 1000px 100px;
+
+}
+
+footer .wave#wave1 {
+    z-index: 1000;
+    bottom:0;
+    opacity: 1;
+    animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom:15px ;
+    animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+
+
+
+
+label {
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+label:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #000;
+    transition: 0.4s;
+} 
+
+label.active:before {
+    left: 24px;
+    background: #fff;
+    
+}
+
+body.night {
+    background:#afe7eb;
+    color: #fff;
+    
+}
+
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    --clr: rgb(127, 207, 255);
+    --clr-alpha: rgb(127, 207, 255, .1);
+    animation: spinner 2s infinite linear;
+    transform-style: preserve-3d;
+    position: absolute;
+    display: flex;
+    top: 6%;
+    left: 60%;
+    
+
+  }
+  
+  .spinner > div {
+    background-color: var(--clr-alpha);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top:5%;
+    left: 40%;
+    display: flex;
+    border: 5px solid var(--clr);
+  }
+  
+  .spinner div:nth-of-type(1) {
+    transform: translateZ(-40px) rotateY(180deg);
+  }
+  
+  .spinner div:nth-of-type(2) {
+    transform: rotateY(-270deg) translateX(50%);
+    transform-origin: top right;
+  }
+  
+  .spinner div:nth-of-type(3) {
+    transform: rotateY(270deg) translateX(-50%);
+    transform-origin: center left;
+  }
+  
+  .spinner div:nth-of-type(4) {
+    transform: rotateX(90deg) translateY(-50%);
+    transform-origin: top center;
+  }
+  
+  .spinner div:nth-of-type(5) {
+    transform: rotateX(-90deg) translateY(50%);
+    transform-origin: bottom center;
+  }
+  
+  .spinner div:nth-of-type(6) {
+    transform: translateZ(40px);
+  }
+  
+  @keyframes spinner {
+    0% {
+      transform: rotate(0deg) rotateX(0deg) rotateY(0deg);
+    }
+  
+    50% {
+      transform: rotate(180deg) rotateX(180deg) rotateY(180deg);
+    }
+  
+    100% {
+      transform: rotate(360deg) rotateX(360deg) rotateY(360deg);
+    }
+  }
+
